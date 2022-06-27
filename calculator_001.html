@@ -1,0 +1,183 @@
+
+<html>
+   <head>
+      <script>
+         //function that display value
+         function dis(val)
+         {
+             document.getElementById("result").value+=val
+         }
+           
+         //function that evaluates the digit and return result
+         function solve()
+         {
+             let x = document.getElementById("result").value
+             let y = eval(x)
+             document.getElementById("result").value = y
+         }
+           
+         //function that clear the display
+         function clr()
+         {
+             document.getElementById("result").value = ""
+         }
+      </script>
+
+      <style>
+        .button {
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+          }
+
+          .button1 {
+            background-color: lightblue; 
+            color: black; 
+            border: 2px #4CAF50;
+            border-radius: 10px;
+          }
+
+          .button1:hover {
+            background-color: #4CAF50;
+            color: white;
+          }
+
+          .button2 {
+            background-color: lightblue; 
+            color: black; 
+            border: 2px #4CAF50;
+            border-radius: 10px;
+          }
+
+          .button2:hover {
+            background-color: #4CAF50;
+            color: white;
+          }
+
+         .title{
+         margin-bottom: 10px;
+         text-align:center;
+         align: center;
+         width: 210px;
+         border: solid black 2px;
+         }
+  
+         input[type="button"]
+         {
+         color: black;
+         width:100%
+         }
+  
+         input[type="text"]
+         {
+         background-color:white;
+         border: solid black 2px;
+         width:100%
+         }
+
+         table, th, td, title {
+    border: 2px solid blue;
+    border-radius: 10px;
+  }
+      </style>
+
+      <style>
+    body  {
+      padding:  25px;
+      background-color: white;
+      color: black;
+      font-size: 25px;
+    }
+    .dark-mode{
+      background-color: black;
+      color: white;
+    }
+</style>
+
+      <!-- for styling -->
+   </head>
+
+   <body>
+      <div class = title> Calculator Example
+      </div>
+
+      <table border="2px">
+
+         <tr>
+            <td colspan="3"><input type="" id="result" /></td>
+            
+            <td><button class="button button1" value="2" 
+        onclick="clr()"> c </button> </td>
+
+         </tr>
+
+         <tr>
+  
+            <td><button class="button button1" value="1" 
+        onclick="dis('1')"> 1 </button></td>
+
+            <td> <button class="button button1" value="2" 
+        onclick="dis('2')"> 2 </button> </td>
+
+            <td><button class="button button1" value="3" 
+        onclick="dis('3')"> 3 </button> </td>
+
+            <td><button class="button button1" value="/" 
+        onclick="dis('/')"> / </button> </td>
+         </tr>
+
+         <tr>
+            <td><button class="button button1" value="4" 
+        onclick="dis('4')"> 4 </button> </td>
+            <td><button class="button button1" value="5" 
+        onclick="dis('5')"> 5 </button> </td>
+            <td><button class="button button1" value="6" 
+        onclick="dis('6')"> 6 </button> </td>
+            <td><button class="button button1" value="-" 
+        onclick="dis('-')"> - </button> </td>
+         </tr>
+
+         <tr>
+            <td><button class="button button1" value="7" 
+        onclick="dis('7')"> 7 </button> </td>
+            <td><button class="button button1" value="8" 
+        onclick="dis('8')"> 8 </button> </td>
+            <td><button class="button button1" value="9" 
+        onclick="dis('9')"> 9 </button> </td>
+            <td><button class="button button1" value="+" 
+        onclick="dis('+')"> + </button> </td>
+         </tr>
+
+         <tr>
+            <td><button class="button button1" value="." 
+        onclick="dis('.')"> . </button></td>
+            <td><button class="button button1" value="0" 
+        onclick="dis('0')"> 0 </button> </td>
+            <!-- solve function call function solve to evaluate value -->
+
+            <td><button class="button button1" value="=" 
+        onclick="solve()"> = </button></td>
+            <td><button class="button button1" value="*" 
+        onclick="dis('*')"> * </button> </td>
+         </tr>
+
+      </table>
+      <button class="button button2" 
+        onclick="myFunction()">Dark Mode</button>
+
+        <script>
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+</script>
+
+   </body>
+</html>   
